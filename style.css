@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0;
+}
+
+#app {
+  padding: 20px 40px;
+}
+
+.widget {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 700px;
+  min-height: 450px;
+  padding: 20px 10px 20px;
+  box-shadow: 0 4px 40px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.widget * {
+  box-sizing: inherit;
+}
+
+.widget img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.widget p {
+  margin: 0;
+}
+
+.widget__today {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.widget__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.widget__time {
+  font-size: 24px;
+}
+
+
+.widget__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.widget__img {
+  width: 80px;
+}
+
+.widget__wheather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget__city {
+  padding-left: 25px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.widget__change-city {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  background: transparent url('../icon/edit.svg') center/contain no-repeat;
+
+}
+
+.widget__other {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: top;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.widget__wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget__temp-big,
+.widget__wind-speed,
+.widget__humidity-value,
+.widget__pressure-value {
+  font-size: 24px;
+}
+
+.widget__wind-text {
+  font-size: 20px;
+}
+
+.widget__humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.widget__pressure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget__forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.widget__day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  border-right: 1px solid #ccc;
+  gap: 5px;
+}
+
+.widget__day-item:last-child {
+  border-right: none;
+}
+
+.widget__day-img {
+  width: 30px;
+}
+
+.widget__form {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.widget__input {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+}
+
+.widget__input::placeholder {
+  color: #fff;
+}
+
+@media(max-width: 900px) {
+  #app {
+    width: 100%;
+  }
+
+  .widget {
+    min-width: 100%;
+  }
+}
+
+@media(max-width: 500px) {
+  #app {
+    padding: 20px 20px;
+  }
+
+  .widget {
+    font-size: 14px;
+    min-height: auto;
+    padding: 65px 10px 30px;
+  }
+
+  .widget__img {
+    width: 70px;
+  }
+
+  .widget__input {
+    font-size: 14px;
+  }
+
+  .widget__wind-text {
+    font-size: 16px;
+  }
+
+
+  .widget__temp-big,
+  .widget__wind-speed,
+  .widget__humidity-value,
+  .widget__pressure-value {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 400px) {
+  .widget__today {
+    grid-template-columns: 1fr;
+  }
+}
